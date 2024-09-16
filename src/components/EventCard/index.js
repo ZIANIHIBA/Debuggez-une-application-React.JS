@@ -4,8 +4,9 @@ import { getMonth } from "../../helpers/Date";
 import "./style.scss";
 
 const EventCard = ({
-  imageSrc,
-  imageAlt,
+
+ imageSrc,
+ imageAlt,
   date = new Date(),
   title,
   label,
@@ -18,7 +19,8 @@ const EventCard = ({
       {...props}
     >
       <div className="EventCard__imageContainer">
-        <img data-testid="card-image-testid" src={imageSrc} alt={imageAlt} />
+        <img data-testid="card-image-testid" src={imageSrc} alt={imageAlt} /> 
+        
         <div className="EventCard__label">{label}</div>
       </div>
       <div className="EventCard__descriptionContainer">
