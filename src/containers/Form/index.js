@@ -8,10 +8,12 @@ const mockContactApi = () => new Promise((resolve) => { setTimeout(resolve, 500)
 
 const Form = ({ onSuccess, onError }) => {
   const [sending, setSending] = useState(false);
+  
   const sendContact = useCallback(
     async (evt) => {
       evt.preventDefault();
       setSending(true);
+      
       // We try to call mockContactApi
       try {
         await mockContactApi();
@@ -24,7 +26,8 @@ const Form = ({ onSuccess, onError }) => {
     [onSuccess, onError]
   );
   return (
-    <form onSubmit={sendContact}>
+    // i add value
+    <form  onSubmit={sendContact}>
       <div className="row">
         <div className="col">
           <Field placeholder="" label="Nom" />
